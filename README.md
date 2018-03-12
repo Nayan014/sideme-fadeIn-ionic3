@@ -1,7 +1,8 @@
 Source: <br />
 Khudka..
+
  <br />
-$ npm install @angular/platform-browser (Optional, if require then install)
+$ npm install @angular/platform-browser (Optional, if require then install)  <br />
 $ npm install @angular/animations
 <br />
 if user click on side menu option submenu option will show on another page within side menu with fadout effect.
