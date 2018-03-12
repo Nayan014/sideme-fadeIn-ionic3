@@ -7,6 +7,12 @@ import { NavController } from 'ionic-angular';
 })
 export class HomePage {
 
+  MENU = {
+    DEFAULT: 'menu-components',
+    MATERIAL: 'menu-material',
+    AVATAR: 'menu-avatar',
+  };
+
   constructor(public navCtrl: NavController) {
 
   }

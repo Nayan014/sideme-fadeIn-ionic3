@@ -1,17 +1,45 @@
-<ion-menu [content]="content">
-  <ion-header>
-    <ion-toolbar>
-      <ion-title>Menu</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-menu [content]="content" id='menuScss'>
 
-  <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
+   <!--  <ion-header  *ngIf="!FirstSlide" [@fadeInOut]>
+        <ion-navbar color="base">  
+         <ion-title style="padding: 0px;" >
+            <ion-icon name="md-arrow-round-back" (click)="back()" style="float:left;padding-left:15px;"></ion-icon>
+            &nbsp; &nbsp; {{ secondSlideTitle }}
+          </ion-title>
+        </ion-navbar>
+    </ion-header> -->
+    <ion-content>
+    <!-- first Page -->
+    <div class="menu-header" *ngIf="FirstSlide" [@fadeInOut]>
+        <ion-icon name="md-settings" style="float: right;font-size: large;margin-top: 5px;" ></ion-icon>
+        <img class="user-avatar round" src="https://s3.amazonaws.com/dev-gohula-bucket/uploads/consultants/files/9/thumbnail/penguins-1474088120.jpg" style="height: 110px;
+        width: 110px;"/>
+  
+        <p class="name" style="margin-top: 5px !important;">Nayan Vekariya</p>
+        <p class="e-mail">nayan.vekariya014@gmail.com<ion-icon name="md-log-out" style="float: right;font-size: large;"></ion-icon></p>
+    </div> 
+
+    <ion-list *ngIf="!FirstSlide" [@fadeInOut] no-padding no-margin>
+            <ion-item style="height: 80Px;font-size: 1.5em;" no-padding>
+            <ion-icon name="md-arrow-round-back" (click)="back()" style="float:left;padding-left:15px;"></ion-icon>
+            &nbsp; &nbsp; {{ secondSlideTitle }}
+            </ion-item>
     </ion-list>
-  </ion-content>
+
+    <!--1-->  
+    <ion-list *ngIf="FirstSlide" [@fadeInOut] >
+        <button ion-item no-lines detail-none *ngFor="let j of dummyProduct; let i = index" (click)="secondSlide(j,i)" style="font-size: 1.3em;border-bottom: 1px solid lightgrey ;">
+          {{j.name}}
+        </button>
+    </ion-list>
+    <!--2-->
+   
+    <ion-list *ngIf="SecondSlide" [@fadeInOut] >
+        <button ion-item no-lines detail-none *ngFor="let s of dummySubProduct; let i = index" (click)="thirdSlide(s,i)" style="font-size: 1.3em;border-bottom: 1px solid lightgrey ;">
+          {{s.name}}  
+        </button>
+    </ion-list>
+</ion-content>
 
 </ion-menu>
 

@@ -14,3 +14,39 @@
 // To declare rules for a specific mode, create a child rule
 // for the .md, .ios, or .wp mode classes. The mode class is
 // automatically applied to the <body> element in the app.
+
+#menuScss{
+      .menu-header {
+            padding: 5px 15px;
+            background-color: #FF1749; 
+          // background-image: url('/assets/img/misc/Untitled design.png');
+            background-size: cover;
+            color: white; 
+            .name {
+              font-weight: 500;
+              margin-bottom: 3px;
+            }
+            .e-mail {
+              margin-top: 0;
+              margin-bottom: 5px;
+            }
+          }
+          .user-avatar {
+            padding: .5em;
+            height: 12vh;
+          }
+          h3,
+          .label,
+          {
+            font-weight: 400;
+          }
+          .round {
+            border-radius: 50%;
+          }
+
+          ion-title{
+            div{
+              text-align: left;
+            }
+          }
+}
